@@ -1,9 +1,9 @@
 const fs = require('fs'),
       path = require('path'),
       fsPromises = fs.promises,
+      output = fs.createWriteStream(bundlePath);
       stylePath = path.join(__dirname, 'styles'),
       bundlePath = path.join(__dirname, 'project-dist/bundle.css'),
-      output = fs.createWriteStream(bundlePath);
 
 fsPromises
   .readdir(stylePath)
